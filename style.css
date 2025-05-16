@@ -1,0 +1,120 @@
+ * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+    }
+
+    body {
+      background-color: #0f1424;
+      color: white;
+      padding: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .dashboard {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      max-width: 1200px;
+      width: 100%;
+    }
+
+    .profile {
+      background-color: #5746ea;
+      border-radius: 15px;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .profile img {
+      width: 60px;
+      border: 2px solid white;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+    }
+
+    .profile h2 {
+      font-size: 1.5rem;
+    }
+
+    .profile p {
+      font-size: 0.9rem;
+      color: #c0c0ff;
+      margin-bottom: 0.5rem;
+    }
+
+    .profile-options {
+      margin-top: 2rem;
+    }
+
+    .profile-options p {
+      margin: 0.3rem 0;
+      cursor: pointer;
+      color: #bbb;
+    }
+
+    .profile-options p.active {
+      color: white;
+      font-weight: bold;
+    }
+
+    .card {
+      background-color: #1c1f4a;
+      border-radius: 15px;
+      padding: 1.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 50px;
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.05);
+    }
+
+    .card-title {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .card-hours {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    .card-previous {
+      font-size: 0.8rem;
+      color: #aaa;
+      margin-top: 0.5rem;
+    }
+
+    /* Color Headers */
+    .work { background-color: #ff8c64; }
+    .play { background-color: #56c2e6; }
+    .study { background-color: #ff5c7c; }
+    .exercise { background-color: #4acf81; }
+    .social { background-color: #7536d3; }
+    .self-care { background-color: #f1c75b; }
+
+    .card-top {
+      height: 50px;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+    }
+
+    @media (max-width: 768px) {
+      .dashboard {
+        grid-template-columns: 1fr;
+      }
+    }
+ 
